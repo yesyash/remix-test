@@ -14,7 +14,6 @@ export const action: ActionFunction = async ({ request }) => {
   return json({ message: 'successful', title, slug, markdown });
 };
 
-
 const FormRoute = () => {
   const [show, setShow] = useState(true)
   const actionData = useActionData()
