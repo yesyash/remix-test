@@ -14,23 +14,15 @@ const PokemonRoute = () => {
   const pokemons = useLoaderData<PokemonDetails[]>()
 
   return (
-    <div>
-      <div className='mb-4'>
-        <Link to="/" className="text-blue-600 hover:underline">
-          Home
-        </Link>
-      </div>
-
-      <ul>
-        {pokemons.map(pokemon =>
-          <li key={pokemon.url}>
-            <Link to={`${pokemon.name}`} className="text-blue-600 hover:underline">
-              {pokemon.name}
-            </Link>
-          </li>
-        )}
-      </ul>
-    </div>
+    <ul>
+      {pokemons.map(pokemon =>
+        <li key={pokemon.url}>
+          <Link to={`${pokemon.name}`} className="text-blue-600 hover:underline">
+            {pokemon.name}
+          </Link>
+        </li>
+      )}
+    </ul>
   )
 }
 
